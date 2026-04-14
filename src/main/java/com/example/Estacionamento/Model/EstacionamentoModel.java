@@ -11,7 +11,7 @@ import jakarta.persistence.Id;
 public class EstacionamentoModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    long id;
+    Long id;
 
     String placa;
     String modelo;
@@ -29,7 +29,7 @@ public class EstacionamentoModel {
         this.valorPago=valorPago;
     }
     
-    public long getID(){return id;}
+    public Long getID(){return id;}
     public String getPlaca(){return placa;}
     public LocalDateTime getDataHoraEntrada(){return dataHoraEntrada;}
     public LocalDateTime getDataHoraSaida(){return dataHoraSaida;}
