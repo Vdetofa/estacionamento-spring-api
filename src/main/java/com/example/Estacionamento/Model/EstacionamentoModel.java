@@ -1,4 +1,4 @@
-package com.example.Estacionamento.Model;
+package com.example.Estacionamento.model;
 
 import java.time.LocalDateTime;
 
@@ -13,11 +13,11 @@ public class EstacionamentoModel {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long id;
 
-    String placa;
-    String modelo;
-    LocalDateTime dataHoraEntrada;
-    LocalDateTime dataHoraSaida;
-    double valorPago;
+    private String placa;
+    private String modelo;
+    private LocalDateTime dataHoraEntrada;
+    private LocalDateTime dataHoraSaida;
+    private double valorPago;
 
     public EstacionamentoModel(){}
 
@@ -31,6 +31,7 @@ public class EstacionamentoModel {
     
     public Long getID(){return id;}
     public String getPlaca(){return placa;}
+    public String getModelo(){return modelo;}
     public LocalDateTime getDataHoraEntrada(){return dataHoraEntrada;}
     public LocalDateTime getDataHoraSaida(){return dataHoraSaida;}
     public double getValorPago(){return valorPago;}
