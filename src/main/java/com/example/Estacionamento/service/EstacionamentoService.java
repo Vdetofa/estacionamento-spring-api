@@ -13,6 +13,10 @@ public class EstacionamentoService {
     @Autowired
     private EstacionamentoRepository repository;
 
+    public void registro(EstacionamentoModel novoVeiculo){
+        repository.save(novoVeiculo);
+        return;
+    }
     public List<EstacionamentoModel> listartudo(){
         return repository.findAll();
     }
