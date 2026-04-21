@@ -17,11 +17,11 @@ public class EstacionamentoModel {
     private String modelo;
     private LocalDateTime dataHoraEntrada;
     private LocalDateTime dataHoraSaida;
-    private double valorPago;
+    private Double valorPago;
 
     public EstacionamentoModel(){}
 
-    public EstacionamentoModel(String placa, String modelo, LocalDateTime dataHoraEntrada,LocalDateTime dataHoraSaida, double valorPago){
+    public EstacionamentoModel(String placa, String modelo, LocalDateTime dataHoraEntrada,LocalDateTime dataHoraSaida, Double valorPago){
         this.placa=placa;
         this.modelo=modelo;
         this.dataHoraEntrada=dataHoraEntrada;
@@ -29,12 +29,12 @@ public class EstacionamentoModel {
         this.valorPago=valorPago;
     }
     
-    public Long getID(){return id;}
+    public Long getId(){return id;}
     public String getPlaca(){return placa;}
     public String getModelo(){return modelo;}
     public LocalDateTime getDataHoraEntrada(){return dataHoraEntrada;}
     public LocalDateTime getDataHoraSaida(){return dataHoraSaida;}
-    public double getValorPago(){return valorPago;}
+    public Double getValorPago(){return valorPago;}
 
     public void setDataHoraEntrada(LocalDateTime dataHoraEntrada){
         this.dataHoraEntrada=dataHoraEntrada;
