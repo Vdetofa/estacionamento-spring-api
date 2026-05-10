@@ -22,6 +22,21 @@ public class EstacionamentoService {
         repository.save(novoVeiculo);
         return;
     }
+
+    public void saida(String placa, double valorPago){
+        var caixa= repository.findByPlacaAndDataHoraSaidaIsNull(placa);
+        if(caixa.isPresent()){
+            EstacionamentoModel veiculo = caixa.get();
+            veiculo.setDataHoraSaida(LocalDateTime.now());
+            veiculo.setValorPago(valorPago);
+
+            repository.save(veiculo);
+        }else{
+            throw new RuntimeException("Veículo não encontrado ou já saiu!");
+        }
+        
+    }
+
     public List<EstacionamentoModel> listartudo(){
         return repository.findAll();
     }

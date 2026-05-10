@@ -27,7 +27,7 @@ public class EstacionamentoModel {
         this.dataHoraEntrada=dataHoraEntrada;
         this.dataHoraSaida=dataHoraSaida;
         this.valorPago=valorPago;
-    }
+    }   
     
     public Long getId(){return id;}
     public String getPlaca(){return placa;}
@@ -42,6 +42,10 @@ public class EstacionamentoModel {
 
       public void setDataHoraSaida(LocalDateTime dataHoraSaida){
         this.dataHoraSaida=dataHoraSaida;
+    }
+
+    public void setValorPago(double valorPago){
+        this.valorPago=valorPago;
     }
 
     
